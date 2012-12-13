@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:p="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd ">
+  
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>com.panerawebordering</groupId>
+    <artifactId>panera</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    
+    
+    <dependencies>
+         <!-- Adding Selenium dependency -->
+         <dependency>
+             <groupId>org.seleniumhq.selenium</groupId>
+             <artifactId>selenium-java</artifactId>
+             <version>2.6.0</version>
+             <scope>compile</scope>
+         </dependency>
+    	<!-- Adding JUnit dependency -->
+         <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.10</version>
+          <scope>test</scope>
+        </dependency>
+ 
+    </dependencies>
+    
+    
+     <build>
+ 	 <plugins>
+ 	   <plugin>
+ 		<groupId>org.apache.maven.plugins</groupId>
+ 		<artifactId>maven-compiler-plugin</artifactId>
+ 		<configuration>
+ 		<source>1.6</source>
+ 		<target>1.6</target>
+ 		</configuration>
+ 		</plugin>
+        <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.12</version>
+        <configuration>
+        <!-- Skip the normal tests, we'll run them in the integration-test phase -->
+        <skip>true</skip>
+        </configuration>        
+        <executions>
+        <execution>
+		<id>id.test-compile</id>
+	    <phase>test-compile</phase>
+		<goals>
+		 <goal>run</goal>
+		</goals>
+		<configuration>
+		<tasks>
+		<echo>in test-compile phase</echo>
+		</tasks>
+		</configuration>
+		</execution>
+		<execution>
+		<id>id.test</id>
+		<phase>test</phase>
+		<goals>
+		  <goal>run</goal>
+		</goals>
+		<configuration>
+		 <tasks>
+		  <echo>in test phase</echo>
+		 </tasks>
+		</configuration>
+		</execution>    
+            
+        </executions>
+        </plugin> 
+ 	 </plugins>
+ 	 </build>
+ 
+    
+</project>
