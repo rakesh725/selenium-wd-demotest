@@ -22,6 +22,11 @@
     </dependencies>
     
     <build>
+	<resources>
+     <resource>
+       <directory>C:\Users\Rakesh\.jenkins\jobs\Selenium-Maven-TestRun\workspace</directory>
+     </resource>
+   </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
