@@ -44,7 +44,7 @@
 		<id>id.test-compile</id>
 	    <phase>test-compile</phase>
 		<goals>
-		 <goal>run</goal>
+		 <goal>test</goal>
 		</goals>
 		<configuration>
 		<tasks>
@@ -56,7 +56,7 @@
 		<id>id.test</id>
 		<phase>test</phase>
 		<goals>
-		  <goal>run</goal>
+		  <goal>test</goal>
 		</goals>
 		<configuration>
 		 <tasks>
