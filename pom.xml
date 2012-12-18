@@ -22,18 +22,10 @@
     </dependencies>
     
     <build>
-	<resources>
-     <resource>
-       <directory>C:/Users/Rakesh/.jenkins/jobs/Selenium-Maven-TestRun/workspace/src/com/demo/testing</directory>
-     </resource>
-   </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-					  <testSourceDirectory>C:/Users/Rakesh/.jenkins/jobs/Selenium-Maven-TestRun/workspace/src/com/demo/testing</testSourceDirectory>
-                </configuration>
                 <executions>
                     <execution>
                         <phase>integration-test</phase>
