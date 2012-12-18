@@ -27,15 +27,30 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <executions>
-                    <execution>
-                        <phase>integration-test</phase>
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
-                        <configuration>
-                            <skip>false</skip>
-                        </configuration>
-                    </execution>
+                           <execution>
+						<id>id.test-compile</id>
+	    <phase>test-compile</phase>
+		<goals>
+		 <goal>test</goal>
+		</goals>
+		<configuration>
+		<tasks>
+		<echo>in test-compile phase</echo>
+		</tasks>
+		</configuration>
+		</execution>
+		<execution>
+		<id>id.test</id>
+		<phase>test</phase>
+		<goals>
+		  <goal>test</goal>
+		</goals>
+		<configuration>
+		 <tasks>
+		  <echo>in test phase</echo> 
+		 </tasks>
+		</configuration>
+		</execution>  
                 </executions>
             </plugin>
         </plugins>
