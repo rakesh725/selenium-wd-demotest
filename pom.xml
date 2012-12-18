@@ -24,7 +24,7 @@
     <build>
 	<resources>
      <resource>
-       <directory>/src/com/demo/testing</directory>
+       <directory>C:/Users/Rakesh/.jenkins/jobs/Selenium-Maven-TestRun/workspace/src/com/demo/testing</directory>
      </resource>
    </resources>
         <plugins>
@@ -34,7 +34,7 @@
                 <configuration>
                     <!-- Skip the normal tests, we'll run them in the integration-test phase -->
                     <skip>true</skip>
-					  <testSourceDirectory>/src/com/demo/testing</testSourceDirectory>
+					  <testSourceDirectory>C:/Users/Rakesh/.jenkins/jobs/Selenium-Maven-TestRun/workspace/src/com/demo/testing</testSourceDirectory>
                 </configuration>
                 
                 <executions>
